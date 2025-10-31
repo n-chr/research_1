@@ -1,0 +1,672 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    font-optical-sizing: auto;
+    font-variation-settings: "wdth" 100;
+    margin: 0;
+    font-family: "Kosugi Maru", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 0;
+}
+
+img {
+    width: 100%;
+}
+
+#wrap {
+    margin: 0 auto;
+    max-width: 1800px;
+}
+
+header {
+    padding: 3rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #FFF;
+}
+
+header img {
+    width: 40%;
+}
+
+section {
+    padding: 250px 50px;
+    max-width: 1280px;
+    margin: 0 auto 50px;
+}
+
+#About {
+    padding: 100px 150px;
+    ;
+}
+
+#About p {
+    text-align: center;
+    line-height: 3rem;
+}
+
+h2 {
+    font-size: 30px;
+    padding: 10px 0;
+}
+
+h3 {
+    color: #333;
+    padding: 10px 0;
+}
+
+.chat-container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 50px 0;
+}
+
+.message {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+    max-width: 75%;
+}
+
+.message.them {
+    flex-direction: row;
+    align-self: flex-start;
+}
+
+.message.me {
+    flex-direction: row-reverse;
+    align-self: flex-end;
+}
+
+.bubble {
+    color: #000;
+    padding: 14px 18px;
+    border-radius: 30px;
+    font-size: 15px;
+    line-height: 1.6;
+    position: relative;
+    word-break: break-word;
+}
+
+.bubble img {
+    border-radius: 30px;
+}
+
+.message.them .bubble {
+    border-bottom-left-radius: 6px;
+}
+
+.message.me .bubble {
+    border-bottom-right-radius: 6px;
+}
+
+.avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+footer {
+    background-color: #333;
+    color: #FFF;
+    padding: 50px;
+}
+
+.footer__container {
+    margin: 0 auto;
+}
+
+footer img {
+    width: 30%;
+}
+
+.footer__caption {
+    margin-top: 0;
+    color: #ffffffb3;
+    font-size: 16px;
+    text-align: left;
+}
+
+footer p {
+    color: #fff;
+    padding: 10px 0 0 0;
+    font-size: 0.8rem;
+}
+
+/* scrolldown-------------------------------------------------- */
+.scrolldown {
+    position: absolute;
+    bottom: 325px;
+    left: 50%;
+}
+
+/* 丸の描写 */
+.scrolldown:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -4px;
+    /*丸の形状*/
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #333333;
+    /*丸の動き1.6秒かけて透過し、永遠にループ*/
+    animation:
+        circlemove 1.6s ease-in-out infinite,
+        cirlemovehide 1.6s ease-out infinite;
+}
+
+/*Scrollテキストの描写*/
+.scrolldown span {
+    position: absolute;
+    left: 10px;
+    bottom: 25px;
+    color: #333333;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    /*縦書き設定*/
+    -ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/*下からの距離が変化して丸の全体が上から下に動く*/
+@keyframes circlemove {
+    0% {
+        bottom: 75px;
+    }
+
+    100% {
+        bottom: -5px;
+    }
+}
+
+/*上から下にかけて丸が透過→不透明→透過する*/
+@keyframes cirlemovehide {
+    0% {
+        opacity: 0
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 0.9;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* 線の描写 */
+.scrolldown:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 2px;
+    height: 80px;
+    background: #333333;
+}
+
+/* pagetop -------------------------------------------------------*/
+a.pagetop {
+    display: block;
+    height: 50px;
+    text-align: center;
+    box-sizing: border-box;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #000;
+    color: #FFF;
+    position: fixed;
+    bottom: 0;
+    right: 25px;
+    padding: 15px;
+}
+
+/* Words--------------------------------------------------------- */
+.list-grid .list {
+    display: grid;
+    margin-bottom: var(--global-space);
+    background: #fff;
+    color: #111;
+    grid-template-rows: auto 1fr auto;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.list-grid {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.list-grid a {
+    margin: 40px 20px;
+}
+
+.heading {
+    display: inline-block;
+    position: relative;
+    padding: 20px 50px;
+    background-color: #f5f5f5;
+    color: #333333;
+    cursor: pointer;
+    transition: transform 0.1s, box-shadow 0.3s;
+}
+
+.heading:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.heading:active {
+    transform: scale(0.98);
+}
+
+.heading::before {
+    position: absolute;
+    bottom: 2px;
+    right: -20px;
+    z-index: -1;
+    transform: rotate(5deg);
+    width: 100%;
+    height: 50%;
+    background-color: #d0d0d0;
+    content: "";
+    filter: blur(4px);
+}
+
+/* Survey_results------------------------------------------------ */
+#Survey_Results {
+    margin: 0 auto 50px;
+}
+
+.accordion_area {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 80px 0 0;
+}
+
+.Survey_Results .accordion_area {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.Survey_Results .accordion_area .accordion_one._flex {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+/* グラフ設定----------------------------------------------------- */
+.accordion_inner {
+    /* グラフを中央に配置するための設定（変更なし） */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+
+#piechart1,
+#piechart2,
+#piechart3 {
+    width: 300px;
+    height: 300px;
+}
+
+/* アコーディオンの基本スタイル -------------------------------- */
+.accordion_container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 50px 0;
+}
+
+.accordion_one {
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.accordion_header {
+    padding: 15px 20px;
+    cursor: pointer;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.accordion_header:hover {
+    background-color: #ff6f6f;
+}
+
+.accordion_header h3 {
+    margin: 0;
+    color: #fff;
+    /* ヘッダー内の文字色を白に */
+}
+
+/* 開閉アイコン（+ / -） */
+.accordion_icon {
+    position: relative;
+    width: 20px;
+    height: 20px;
+}
+
+.accordion_icon::before,
+.accordion_icon::after {
+    content: '';
+    position: absolute;
+    background: #fff;
+    transition: transform 0.3s ease;
+}
+
+.accordion_icon::before {
+    width: 2px;
+    height: 100%;
+    left: 9px;
+    top: 0;
+}
+
+.accordion_icon::after {
+    width: 100%;
+    height: 2px;
+    top: 9px;
+    left: 0;
+}
+
+/* 開いた時に縦棒を消す（横棒だけ残るように） */
+.accordion_one.open .accordion_icon::before {
+    transform: rotate(90deg);
+}
+
+/* アコーディオンの内容エリア */
+.accordion_inner {
+    /* 初期状態は非表示（JavaScriptで高さとパディングを変更） */
+    height: 0;
+    padding: 0 20px;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    background-color: #f9f9f9;
+    text-align: center;
+    /* グラフを中央に */
+}
+
+#piechart1,
+#piechart2,
+#piechart3 {
+    margin: 20px auto;
+}
+
+.catch_copy span {
+    transition: 1s;
+    opacity: 0;
+    transform: translateY(20px);
+    display: block;
+}
+
+.catch_copy span:first-child {
+    animation: catch_anime 1.4s forwards 1s;
+}
+
+.catch_copy span:nth-child(2) {
+    animation: catch_anime 1.4s forwards 2s;
+}
+
+.catch_copy span:nth-child(3) {
+    animation: catch_anime 1.4s forwards 3s;
+}
+
+.catch_copy span:nth-child(4) {
+    animation: catch_anime 1.4s forwards 4s;
+}
+
+@keyframes catch_anime {
+    0% {
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 画像拡大------------------------------------------------------ */
+/* モーダル全体のコンテナ */
+.modal {
+    display: none;
+    /* 初期状態は非表示 */
+    position: fixed;
+    /* 常に画面上に固定 */
+    z-index: 1000;
+    /* 他の要素の上に表示 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    /* スクロール可能にする */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* 半透明の黒背景 */
+}
+
+/* 閉じるボタン */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+    line-height: 1;
+    /* ボタンの縦位置を調整 */
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #bbb;
+    text-decoration: none;
+}
+
+/* モーダルの画像（拡大表示されるコンテンツ） */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    /* 幅の最大値 */
+    max-width: 700px;
+    /* 画像の最大幅 */
+    /* 縦方向の中央寄せ */
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+/* ズームアニメーション */
+@keyframes zoom {
+    from {
+        transform: scale(0) translateY(-50%)
+    }
+
+    to {
+        transform: scale(1) translateY(-50%)
+    }
+}
+
+/* モーダル画像がチャットバブルの角丸を継承しないようにリセット */
+.modal-content {
+    border-radius: 0 !important;
+}
+
+/* スマホ対応 */
+@media screen and (max-width: 767px) {
+    .modal-content {
+        width: 90%;
+    }
+}
+
+/* ------------------------------------------------------------- */
+@media screen and (min-width: 1280px) {
+
+    /* より大きい時に発動するスタイルを記述 */
+    #About {
+        padding: 200px 150px;
+    }
+
+    .scrolldown {
+        bottom: 250px;
+    }
+
+    #piechart1,
+    #piechart2,
+    #piechart3 {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    h2 {
+        font-size: 30px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    header {
+        padding: 2rem;
+    }
+
+    #About p {
+        font-size: 14px;
+    }
+
+    .list-grid a {
+        margin: 20px 10px;
+    }
+
+    .heading {
+        padding: 15px 20px;
+    }
+
+    .heading p {
+        font-size: 14px;
+    }
+
+    header img {
+        width: 100%;
+    }
+
+    .bubble img {
+        border-radius: 10px;
+    }
+
+    #Survey_Results {
+        padding: 250px 50px 0;
+    }
+
+    #piechart1,
+    #piechart2,
+    #piechart3 {
+        width: 250px;
+        height: 250px;
+    }
+
+    footer p {
+        font-size: 0.5rem;
+    }
+
+    footer img {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    p {
+        font-size: 14px;
+    }
+
+    header img {
+        width: 100%;
+    }
+
+    #About {
+        padding: 120px 100px;
+    }
+
+    section {
+        padding: 100px 50px 0;
+        max-width: 1280px;
+        margin: 0 auto 50px;
+    }
+
+    .bubble p {
+        font-size: 14px;
+    }
+
+    .heading {
+        padding: 20px;
+    }
+
+    .list-grid {
+        display: block;
+    }
+
+    footer img {
+        width: 100%;
+    }
+
+    #piechart1,
+    #piechart2,
+    #piechart3 {
+        width: 200px;
+        height: 200px;
+    }
+
+    .scrolldown {
+        bottom: 300px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .scrolldown {
+        bottom: 200px;
+    }
+}

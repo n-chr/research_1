@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.1">
+    <title>Good Words Stocker</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <a href="index.html">
+                <img src="images/logo.png">
+            </a>
+        </header>
+        <section id="About">
+            <p class="catch_copy"><span>ようこそ！</span>
+                <span>ここは、人に言われて嬉しい言葉を集めるWebサイトです！</span>
+                <span>人に言われると嬉しい言葉が心理的な健康に与える影響を考慮し、</span>
+                <span>ストレス軽減や自己肯定感の向上に役立つ言葉を広めます！</span>
+                <span>お役に立てば嬉しいです！</span>
+            </p>
+        </section>
+        <div class="scrolldown"><span>Scroll</span></div>
+        <section id="Words">
+            <h2>Words</h2>
+            <h3>分類</h3>
+            <div class="list-grid">
+                <a href="single_1.html" class="heading" style="border-right: 27px solid #ff8787;">Recognition
+                    <h3>承認</h3>
+                    <p>相手の行動、努力、結果を認め、評価する言葉</p>
+                </a>
+                <a href="single_2.html" class="heading" style="border-right: 27px solid #ffaa25;">Encouragement
+                    <h3>励まし</h3>
+                    <p>相手を鼓舞し、前向きな行動を促す言葉</p>
+                </a>
+                <a href="single_3.html" class="heading" style="border-right: 27px solid #90e683;">Presence
+                    <h3>存在承認</h3>
+                    <p>相手の存在そのものを認め、受け入れていることを示す言葉</p>
+                </a>
+                <a href="single_4.html" class="heading" style="border-right: 27px solid #708eff;">Skill &
+                    Appearance
+                    <h3>能力・外見承認</h3>
+                    <p>相手のスキル、才能、知識、または外見を褒める言葉</p>
+                </a>
+                <a href="single_5.html" class="heading" style="border-right: 27px solid #ad70ff;">Personality
+                    <h3>人柄評価</h3>
+                    <p>相手の性格、内面、人間性といった抽象的な特質を褒める言葉</p>
+                </a>
+                <a href="single_6.html" class="heading" style="border-right: 27px solid #ff9adc;">Gratitude
+                    <h3>感謝</h3>
+                    <p>相手の行為や配慮に対してお礼の気持ちを伝える言葉</p>
+                </a>
+            </div>
+        </section>
+        <section id="Survey_Results">
+            <h2>Survey Results</h2>
+            <h3>アンケート結果</h3>
+            <div class="Survey_Results">
+                <div class="accordion_container">
+
+                    <div class="accordion_one" data-chart-id="piechart1">
+                        <div class="accordion_header" style="background-color: #81D4FA;">
+                            <h3>年代別人数</h3>
+                            <span class="accordion_icon"></span>
+                        </div>
+                        <div class="accordion_inner">
+                            <div id="piechart1" style="width: 100%; height: 350px;"></div>
+                        </div>
+                    </div>
+
+                    <div class="accordion_one" data-chart-id="piechart2">
+                        <div class="accordion_header" style="background-color: #F48FB1;">
+                            <h3>性別人数</h3>
+                            <span class="accordion_icon"></span>
+                        </div>
+                        <div class="accordion_inner">
+                            <div id="piechart2" style="width: 100%; height: 350px;"></div>
+                        </div>
+                    </div>
+
+                    <div class="accordion_one" data-chart-id="piechart3">
+                        <div class="accordion_header" style="background-color: #A5D6A7;">
+                            <h3>職業別人数</h3>
+                            <span class="accordion_icon"></span>
+                        </div>
+                        <div class="accordion_inner">
+                            <div id="piechart3" style="width: 100%; height: 350px;"></div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="chat-container">
+                    <div class="message them inview_re">
+                        <div class="avatar"><img src="../Web/images/chaticon.jpg" alt="avatar"></div>
+                        <div class="bubble" style="background: #f2f3f7;">
+                            <p>Q1,言われて嬉しかった“ひとこと”や“ワード”を教えてください。</p>
+                        </div>
+                    </div>
+                    <div class="message me">
+                        <div class="avatar"><img src="../Web/images/chaticon.jpg" alt="avatar"></div>
+                        <div class="bubble" style="background: #fde5e5;">
+                            <p><img src="images/Q.1.png"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-container">
+                    <div class="message them inview_re">
+                        <div class="avatar"><img src="../Web/images/chaticon.jpg" alt="avatar"></div>
+                        <div class="bubble" style="background: #f2f3f7;">
+                            <p>Q2,その言葉をくれた人は誰？</p>
+                        </div>
+                    </div>
+                    <div class="message me">
+                        <div class="avatar"><img src="../Web/images/chaticon.jpg" alt="avatar"></div>
+                        <div class="bubble" style="background: #fde5e5;">
+                            <p><img src="images/Q.2.png"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-container">
+                    <div class="message them inview_re">
+                        <div class="avatar"><img src="../Web/images/chaticon.jpg" alt="avatar"></div>
+                        <div class="bubble" style="background: #f2f3f7;">
+                            <p>Q3,その言葉が嬉しかった理由を選んでください。</p>
+                        </div>
+                    </div>
+                    <div class="message me">
+                        <div class="avatar"><img src="../Web/images/chaticon.jpg" alt="avatar"></div>
+                        <div class="bubble" style="background: #fde5e5;">
+                            <p><img src="images/Q.3.png"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-container">
+                    <div class="message them inview_re">
+                        <div class="avatar"><img src="../Web/images/chaticon.jpg" alt="avatar"></div>
+                        <div class="bubble" style="background: #f2f3f7;">
+                            <p>Q5,今まで言われて嬉しかった“文章・セリフ”を教えてください。</p>
+                        </div>
+                    </div>
+                    <div class="message me">
+                        <div class="avatar"><img src="../Web/images/chaticon.jpg" alt="avatar"></div>
+                        <div class="bubble" style="background: #fde5e5;">
+                            <ul>
+                                <li>・いつも頑張ってるね。</li>
+                                <li>・これからも、よろしく！</li>
+                                <li>・他の人とは違う視点で物事を見れていてすごいと思う。</li>
+                                <li>・いつも頑張ってて偉い！</li>
+                                <li>・あなたの演奏、とても感動したよ。</li>
+                                <li>・貴方に出会えてよかった。</li>
+                                <li>・ありがとう。</li>
+                                <li>・あなたのそういうところすっごく好き。</li>
+                                <li>・カリスマ性があるね</li>
+                                <li>・今まであった人でいちばん面白いわ。</li>
+                                <li>・助かった！</li>
+                                <li>・〇〇が居ないとはじまらない。</li>
+                                <li>・きっと何とかなるから大丈夫だよ。</li>
+                                <li>・無理してなくても一緒にいたいと思える。</li>
+                                <li>・いつまでも支えるよ。</li>
+                                <li>・いつも頼りにしてる。</li>
+                                <li>・いるだけで場が明るくなるね。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-container">
+                    <div class="message them inview_re">
+                        <div class="avatar"><img src="../Web/images/chaticon.jpg" alt="avatar"></div>
+                        <div class="bubble" style="background: #f2f3f7;">
+                            <p>Q6,その言葉が心に残った理由（自由回答）</p>
+                        </div>
+                    </div>
+                    <div class="message me">
+                        <div class="avatar"><img src="../Web/images/chaticon.jpg" alt="avatar"></div>
+                        <div class="bubble" style="background: #ffe9e9;">
+                            <ul>
+                                <li>・この先も一緒に過ごせていけると思ったから。</li>
+                                <li>・自分が音楽において1番大切にしている部分を認めてもらえた気がしたから。</li>
+                                <li>・初めて言われたから。</li>
+                                <li>・自分の知らないことを教えてもらったから。</li>
+                                <li>・嬉しかった！</li>
+                                <li>・社会人になるのが不安だったけど、すこし安心できたから。</li>
+                                <li>・今までの頑張りを全て認めてくれてた気がしたから。</li>
+                                <li>・信頼を置いてくれていると感じた。</li>
+                                <li>・ちゃんと見てくれてる、認めてくれてると思えたから。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="imageModal" class="modal">
+                <span class="close-btn">&times;</span>
+                <img class="modal-content" id="modalImage">
+            </div>
+            <div id="imageModal" class="modal">
+                <span class="close-btn">&times;</span>
+                <img class="modal-content" id="modalImage">
+            </div>
+            <div id="imageModal" class="modal">
+                <span class="close-btn">&times;</span>
+                <img class="modal-content" id="modalImage">
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__head">
+                    <a href="index.html">
+                        <h1><img src="images/logo_w.png"></h1>
+                    </a>
+                    <p class="footer__caption" style="padding: 5px 0 0;">人に言われて嬉しい言葉を集めるWebサイト</p>
+                </div>
+            </div>
+        </footer>
+        <a href="#wrap" class="pagetop">▲</a>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+</body>
+
+</html>

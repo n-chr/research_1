@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Word Stocker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/single_style.css">
+    <script src="js/single_script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <a href="index.html">
+                <h1><img src="images/logo.png"></h1>
+            </a>
+            <div id="navArea">
+                <nav>
+                    <div class="inner">
+                        <ul>
+                            <li><a href="index.html#About">Home</a></li>
+                            <li><a href="index.html#Words">Words</a></li>
+                            <li><a href="index.html#Survey Results">Survey Results</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="toggle_btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div id="mask"></div>
+        </header>
+
+    </div>
+    <main>
+        <section id="Words" style="background-color: #90e683;">
+            <h2>存在承認</h2>
+            <h3 style="color: #FFF;">相手の存在そのものを認め、受け入れていることを示す言葉</h3>
+        </section>
+
+        <section id="Words-list">
+            <div class="list-grid">
+                <div class="heading" style="border-right: 27px solid #90e683;" data-modal-target="#modal-aete">
+                    <h4>会えてよかった</h4>
+                </div>
+                <div class="heading" style="border-right: 27px solid #90e683;" data-modal-target="#modal-issyo">
+                    <h4>一緒にいてくれるだけで嬉しい</h4>
+                </div>
+                <div class="heading" style="border-right: 27px solid #90e683;" data-modal-target="#modal-kiitekureru">
+                    <h4>話を聞かせてくれてありがとう</h4>
+                </div>
+                <div class="heading" style="border-right: 27px solid #90e683;" data-modal-target="#modal-mamade">
+                    <h4>あなたのままでいいよ</h4>
+                </div>
+                <div class="heading" style="border-right: 27px solid #90e683;" data-modal-target="#modal-ibasyo">
+                    <h4>ここがあなたの居場所だよ</h4>
+                </div>
+                <div class="heading" style="border-right: 27px solid #90e683;" data-modal-target="#modal-renraku">
+                    <h4>また連絡するね</h4>
+                </div>
+                <div class="heading" style="border-right: 27px solid #90e683;" data-modal-target="#modal-kimisyanakya">
+                    <h4>君じゃなきゃダメだ</h4>
+                </div>
+                <div class="heading" style="border-right: 27px solid #90e683;" data-modal-target="#modal-hanasitai">
+                    <h4>また話したい</h4>
+                </div>
+                <div class="heading" style="border-right: 27px solid #90e683;" data-modal-target="#modal-sabisii">
+                    <h4>あなたがいないと寂しい</h4>
+                </div>
+                <div class="heading" style="border-right: 27px solid #90e683;" data-modal-target="#modal-taisetu">
+                    <h4>大切に思っているよ</h4>
+                </div>
+            </div>
+        </section>
+        <section id="modal">
+            <div id="modal-aete" class="modal">
+                <div class="modal-content">
+                    <h3>会えてよかった</h3>
+                    <p>相手との出会いや関係性を肯定し、その存在を受け入れていることを伝える。</p>
+                    <button class="close-btn modal-close" style="background-color: #90e683;">閉じる</button>
+                </div>
+            </div>
+            <div id="modal-issyo" class="modal">
+                <div class="modal-content">
+                    <h3>一緒にいてくれるだけで嬉しい</h3>
+                    <p>行動や結果に関わらず、ただ隣にいるという存在自体が喜びであることを伝える。</p>
+                    <button class="close-btn modal-close" style="background-color: #90e683;">閉じる</button>
+                </div>
+            </div>
+            <div id="modal-kiitekureru" class="modal">
+                <div class="modal-content">
+                    <h3>話を聞かせてくれてありがとう</h3>
+                    <p>相手の経験や内面を尊重し、それを分かち合ってくれたことに対し、存在を深く承認する。</p>
+                    <button class="close-btn modal-close" style="background-color: #90e683;">閉じる</button>
+                </div>
+            </div>
+            <div id="modal-mamade" class="modal">
+                <div class="modal-content">
+                    <h3>あなたのままでいいよ</h3>
+                    <p>変化や努力を求めず、現在の存在を完全に受け入れていることを示す。</p>
+                    <button class="close-btn modal-close" style="background-color: #90e683;">閉じる</button>
+                </div>
+            </div>
+            <div id="modal-ibasyo" class="modal">
+                <div class="modal-content">
+                    <h3>ここがあなたの居場所だよ</h3>
+                    <p>物理的、精神的な居場所の提供を伝え、無条件の所属を承認する。</p>
+                    <button class="close-btn modal-close" style="background-color: #90e683;">閉じる</button>
+                </div>
+            </div>
+            <div id="modal-renraku" class="modal">
+                <div class="modal-content">
+                    <h3>また連絡するね</h3>
+                    <p>今後も関係を継続したいという意思を伝え、相手の存在を関係性の中で承認する。</p>
+                    <button class="close-btn modal-close" style="background-color: #90e683;">閉じる</button>
+                </div>
+            </div>
+            <div id="modal-kimisyanakya" class="modal">
+                <div class="modal-content">
+                    <h3>〇〇じゃなきゃダメだ</h3>
+                    <p>相手の存在が不可欠であるという、無条件の肯定。</p>
+                    <button class="close-btn modal-close" style="background-color: #90e683;">閉じる</button>
+                </div>
+            </div>
+            <div id="modal-hanasitai" class="modal">
+                <div class="modal-content">
+                    <h3>また話したい</h3>
+                    <p>相手との関係性や存在を受け入れていることを示し、再会を望んでいる。</p>
+                    <button class="close-btn modal-close" style="background-color: #90e683;">閉じる</button>
+                </div>
+            </div>
+            <div id="modal-sabisii" class="modal">
+                <div class="modal-content">
+                    <h3>あなたがいないと寂しい</h3>
+                    <p>相手の存在が自分にとって必要であり、重要であることを伝える。</p>
+                    <button class="close-btn modal-close" style="background-color: #90e683;">閉じる</button>
+                </div>
+            </div>
+            <div id="modal-taisetu" class="modal">
+                <div class="modal-content">
+                    <h3>大切に思っているよ</h3>
+                    <p>相手の存在価値を肯定し、深い愛情や尊重の念を伝える。</p>
+                    <button class="close-btn modal-close" style="background-color: #90e683;">閉じる</button>
+                </div>
+            </div>
+
+            <div class="chat-container">
+                <h3 style="padding: 0 0 100px;">実際に言われた言葉たち</h3>
+                <div class="message them">
+                    <div class="avatar"><img src="../Web/images/chaticon.jpg" alt="avatar"></div>
+                    <div class="bubble" style="background: #d3ffd6;">流石、◯◯だ！</div>
+                </div>
+                <div class="message me">
+                    <div class="avatar"><img src="../Web/images/chaticon.jpg" alt="avatar"></div>
+                <div class="bubble" style="background: #d3ffd6;">いつも頼りにしてるよ！</div>
+                </div>
+                <div class="message them">
+                    <div class="avatar"><img src="../Web/images/chaticon.jpg" alt="avatar"></div>
+                    <div class="bubble" style="background: #d3ffd6;">頑張っててえらいね。</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="comment">
+            <div class="box" style="border: 2px solid #90e683;">
+                <h3 style="background-color: #90e683;">Comment</h3>
+                <p>存在承認系の言葉は、特に人間関係の土台を築く上で効果的です。言葉を可視化する際に、これらの言葉が「心理的安全性の提供」にどのように寄与するかという視点で分析を加えると、研究の深みが増すかもしれません。
+                </p>
+            </div>
+        </section>
+
+        <div id="modal-mask" class="mask"></div>
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__head">
+                    <a href="index.html">
+                        <h1><img src="images/logo_w.png"></h1>
+                    </a>
+                    <p class="footer__caption" style="padding: 5px 0 0;">人に言われて嬉しい言葉を集めるWebサイト</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <a href="#" class="pagetop">▲</a>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="js/lightbox.min.js"></script>
+</body>
+
+</html>
